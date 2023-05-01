@@ -14,4 +14,9 @@ public class LabLesson implements Lesson {
     public int getMaxScore() {
         return maxScore;
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }

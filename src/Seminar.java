@@ -14,4 +14,9 @@ public class Seminar implements Lesson {
     public int getMaxScore() {
         return maxScore;
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 }
